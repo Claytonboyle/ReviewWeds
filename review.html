@@ -1,0 +1,37 @@
+<!-- review.html -->
+
+
+<!DOCTYPE html>
+<html ng-app="humpDay">
+<head>
+	<title>Review</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
+	<script type="text/javascript" src="review.js"></script>
+</head>
+
+<body ng-controller="appController">
+	<form ng-submit = "createCharacter()">
+		<input poker ng-model="character.name" placeholder="name">
+		<input ng-model="character.email" placeholder="email">
+		<input ng-model="character.chores" placeholder="chores">
+	<input type="submit">
+
+	<h3>Cast</h3>
+
+	<div ng-repeat="people in getCast()" ng-click="chooseMember(people)">
+		<h3>Cast member # {{$index+1}}</h3>
+		Name:{{people.name}}<br>
+		Email: {{people.email}}<br>
+		Chores: {{people.chores}}<br>
+		-----------------------------
+	</div>
+
+	</form>
+
+	<POKER></POKER>
+
+
+</body>
+
+</html>
+
